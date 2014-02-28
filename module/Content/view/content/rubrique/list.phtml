@@ -1,0 +1,14 @@
+Rubrique - list
+
+<?php
+foreach ($rubriques as $rubrique):
+	//$this->url('rubrique', array('id_rubrique'=>$rubrique->rubrique_id))
+	//rubrique : c'est le nom de la route (route::rubrique)
+	//id_rubrique c'est le parametre de la route (route::rubrique)
+?>	
+	<div>
+		<a href="<?php echo $this->url('rubrique', array('id_rubrique'=>$rubrique->rubrique_id)) ?>"><?php echo $rubrique->title; ?></a>
+	</div>
+<?php
+endforeach;
+?>

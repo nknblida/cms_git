@@ -1,0 +1,23 @@
+Article - List
+<table>
+	<tr>
+		<td>ID</td>
+		<td>Titre</td>
+		<td>Action</td>
+	</tr>
+<?php
+foreach ($articles as $article):
+?>
+	<tr>
+		<td><?php echo $article->article_id ?></td>
+		<td><?php echo $article->title ?></td>
+		<td>
+			<a href="<?php echo $this->url('rubrique/article', array('id_rubrique'=>$article->article_id, 'id_article'=>$article->article_id)); ?>">
+				Lire
+			</a>
+		</td>
+	</tr>
+<?php
+endforeach;
+?>
+</table>
